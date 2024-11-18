@@ -1,0 +1,121 @@
+/* Styling untuk card produk */
+.card {
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card-body {
+    padding: 15px;
+  }
+  
+  .card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .card-price {
+    font-size: 1.2rem;
+    color: #ff5722;
+    font-weight: bold;
+  }
+  
+  .card-footer {
+    background-color: #f7f7f7;
+    border-top: 1px solid #e0e0e0;
+  }
+  
+  .card-footer button {
+    border-radius: 25px;
+    width: 100%;
+  }
+  
+  .card-footer button:hover {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .col-md-4 {
+    flex: 1 0 30%;
+    max-width: 30%;
+    margin-bottom: 20px;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .col-md-4 {
+      flex: 1 0 45%;
+      max-width: 45%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .col-md-4 {
+      flex: 1 0 100%;
+      max-width: 100%;
+    }
+  }
+  
+  /* Efek backdrop ketika modal terbuka */
+  .modal-backdrop {
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.7); /* Darken the background */
+  }
+  
+  /* Fullscreen modal */
+  .modal-dialog {
+    max-width: 100%;
+    margin: 0;
+    height: 100%;
+  }
+  
+  .modal-content {
+    height: 100%;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Modal Body: Make it full-screen */
+  .modal-body {
+    overflow-y: auto;
+    flex-grow: 1;
+  }
+  
+  .modal-header, .modal-footer {
+    padding: 20px;
+    background: #fff;
+  }
+  
+  .modal-header {
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .modal-footer {
+    border-top: 1px solid #e0e0e0;
+  }
+  
+  /* Disable background scroll */
+  body.modal-open {
+    overflow: hidden;
+  }
+  
